@@ -249,7 +249,7 @@ Note 3 to entry: The use conditions for validation can be real or simulated.""" 
 ###  http://emmo.info/emmo#EMMO_433eac85_e5ae_4a88_8fd5_27299d76c8c7
 :EMMO_433eac85_e5ae_4a88_8fd5_27299d76c8c7 rdf:type owl:Class ;
                                            rdfs:subClassOf :EMMO_3b19eab4_79be_4b02_bdaf_ecf1f0067a68 ,
-                                                           :EMMO_508f7b78_b67a_4cbf_bab0_a5afd5eb0134 ;
+                                                           :EMMO_508f7b78_b67a_4cbf_bab0_a5afd5eb0134 ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :EMMO_dc57d998_23db_4d8e_b2cd_f346b195b846 ;
                                                              owl:someValuesFrom :EMMO_1dffa295_1a9c_4a11_8827_019c179375f4
@@ -596,7 +596,7 @@ Note 1 to entry: The customer may be the user or a distributor.""" ;
 set of features that concern the collection, analysis, persistence, dissemination, and usage of data
 EXAMPLE:
 Relevance, accuracy, timeliness, punctuality, accessibility, clarity, comparability, coherence""" ,
-                                                        "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
+                                                        "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
                                            skos:prefLabel "DataQuality"@en .
 
 [ rdf:type owl:Axiom ;
@@ -613,7 +613,7 @@ Information technology —"""
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :EMMO_bc5adc6b_2dce_4735_8306_e121b83d5027 ;
    owl:annotatedProperty rdfs:comment ;
-   owl:annotatedTarget "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
+   owl:annotatedTarget "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
    rdfs:seeAlso """ISO/IEC 25024:2015(en)
 Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of data quality"""
  ] .
