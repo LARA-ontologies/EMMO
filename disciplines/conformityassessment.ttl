@@ -25,6 +25,30 @@
                                            skos:prefLabel "hasConformityAssessmentOutput"@en .
 
 
+###  http://emmo.info/emmo#EMMO_8f7c8bb2_f062_4459_9470_d11f0544fcb5
+:EMMO_8f7c8bb2_f062_4459_9470_d11f0544fcb5 rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain :EMMO_7aa150c8_a726_4494_bbef_2232ab58549b ;
+                                           rdfs:range :EMMO_508f7b78_b67a_4cbf_bab0_a5afd5eb0134 ;
+                                           skos:prefLabel "hasFailed"@en .
+
+
+###  http://emmo.info/emmo#EMMO_a1c42ede_86d9_470e_9bd7_3a2aee88b303
+:EMMO_a1c42ede_86d9_470e_9bd7_3a2aee88b303 rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain :EMMO_bc5adc6b_2dce_4735_8306_e121b83d5027 ;
+                                           rdfs:range :EMMO_f41e958d_a115_442f_8766_8a280444b0ec ;
+                                           skos:prefLabel "hasValue"@en .
+
+
+###  http://emmo.info/emmo#EMMO_b2c0800b_5e4c_4bcc_821a_2016a54abef4
+:EMMO_b2c0800b_5e4c_4bcc_821a_2016a54abef4 rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain :EMMO_31658519_8fe3_489c_9b30_1c2920c78b80 ;
+                                           rdfs:range :EMMO_57301187_137f_4103_a875_79a97e566ba7 ;
+                                           skos:prefLabel "hasCARoleof"@en .
+
+
 ###  http://emmo.info/emmo#EMMO_cc677576_5bf4_4f11_9da4_f52556545320
 :EMMO_cc677576_5bf4_4f11_9da4_f52556545320 rdf:type owl:ObjectProperty ;
                                            rdfs:subPropertyOf :EMMO_e1097637_70d2_4895_973f_2396f04fa204 ;
@@ -596,7 +620,7 @@ Note 1 to entry: The customer may be the user or a distributor.""" ;
 set of features that concern the collection, analysis, persistence, dissemination, and usage of data
 EXAMPLE:
 Relevance, accuracy, timeliness, punctuality, accessibility, clarity, comparability, coherence""" ,
-                                                        "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
+                                                        "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
                                            skos:prefLabel "DataQuality"@en .
 
 [ rdf:type owl:Axiom ;
@@ -613,7 +637,7 @@ Information technology —"""
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :EMMO_bc5adc6b_2dce_4735_8306_e121b83d5027 ;
    owl:annotatedProperty rdfs:comment ;
-   owl:annotatedTarget "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
+   owl:annotatedTarget "degree to which the characteristics of data (4.5) satisfy stated and implied needs when used under specified conditions" ;
    rdfs:seeAlso """ISO/IEC 25024:2015(en)
 Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of data quality"""
  ] .
