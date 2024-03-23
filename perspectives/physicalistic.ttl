@@ -44,9 +44,11 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://w3id.org/emmo#EMMO_09f0ac34_c349_46b5_acf0_0edeae52cca1
-:EMMO_09f0ac34_c349_46b5_acf0_0edeae52cca1 owl:disjointUnionOf ( :EMMO_38b579de_4331_40e0_803d_09efa298e726
-                                                                 :EMMO_5cc4e111_3eb1_44a3_9369_5af3846cf605
-                                                               ) .
+:EMMO_09f0ac34_c349_46b5_acf0_0edeae52cca1 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_38b579de_4331_40e0_803d_09efa298e726
+                                                                               :EMMO_5cc4e111_3eb1_44a3_9369_5af3846cf605
+                                                                             )
+                                                               ] .
 
 
 ###  https://w3id.org/emmo#EMMO_12aae025_a226_4762_9d51_81200a8ce54c
@@ -76,6 +78,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                                     ) ;
                                                                  rdf:type owl:Class
                                                                ] ;
+                                           owl:disjointWith :EMMO_29108c7c_9087_4992_ab1c_02561665df21 ,
+                                                            :EMMO_cafd0f10_ce85_48b9_9a36_2b0af141ce21 ;
                                            skos:example """Examples of composite particles with integer spin:
 spin 0: H1 and He4 in ground state, pion
 spin 1: H1 and He4 in first excited state, meson
@@ -117,6 +121,7 @@ Note that the name of a compound may refer to the respective molecular entity or
                                                                                     ) ;
                                                                  rdf:type owl:Class
                                                                ] ;
+                                           owl:disjointWith :EMMO_820619ca_b23e_4c7a_8543_18a17722abc0 ;
                                            skos:example """Examples of composite particles with half-integer spin:
 spin 1/2: He3 in ground state, proton, neutron
 spin 3/2: He5 in ground state, Delta baryons (excitations of the proton and neutron)"""@en ;
@@ -142,6 +147,11 @@ spin 3/2: He5 in ground state, Delta baryons (excitations of the proton and neut
 
 ###  https://w3id.org/emmo#EMMO_3397f270_dfc1_4500_8f6f_4d0d85ac5f71
 :EMMO_3397f270_dfc1_4500_8f6f_4d0d85ac5f71 rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_50967f46_51f9_462a_b1e4_e63365b4a184
+                                                                               :EMMO_e024544d_e374_45b7_9340_1982040bc6b7
+                                                                             )
+                                                               ] ;
                                            rdfs:subClassOf :EMMO_21205421_5783_4d3e_81e5_10c5d894a88a ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :EMMO_dc57d998_23db_4d8e_b2cd_f346b195b846 ;
@@ -151,9 +161,6 @@ spin 3/2: He5 in ground state, Delta baryons (excitations of the proton and neut
                                                              owl:onProperty :EMMO_dc57d998_23db_4d8e_b2cd_f346b195b846 ;
                                                              owl:someValuesFrom :EMMO_f835f4d4_c665_403d_ab25_dca5cc74be52
                                                            ] ;
-                                           owl:disjointUnionOf ( :EMMO_50967f46_51f9_462a_b1e4_e63365b4a184
-                                                                 :EMMO_e024544d_e374_45b7_9340_1982040bc6b7
-                                                               ) ;
                                            skos:altLabel "ChemicalSubstance"@en ;
                                            skos:example "H₂0, C₆H₁₂O₆, CH₄"@en ;
                                            skos:prefLabel "Molecule"@en ;
@@ -167,9 +174,12 @@ e.g. you cannot remove H from H₂0 without changing the molecule type (essentia
 
 ###  https://w3id.org/emmo#EMMO_38b579de_4331_40e0_803d_09efa298e726
 :EMMO_38b579de_4331_40e0_803d_09efa298e726 rdf:type owl:Class ;
-                                           owl:disjointUnionOf ( :EMMO_57d977ab_0036_4779_b59a_e47620afdb9c
-                                                                 :EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca
-                                                               ) ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_57d977ab_0036_4779_b59a_e47620afdb9c
+                                                                               :EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca
+                                                                             )
+                                                               ] ;
+                                           owl:disjointWith :EMMO_5cc4e111_3eb1_44a3_9369_5af3846cf605 ;
                                            skos:prefLabel "PhysicalObject"@en ;
                                            :EMMO_31252f35_c767_4b97_a877_1235076c3e13 """It is natural to define entities made or more than one smaller parts as object according to some unity criteria. One of the most general one applicable to causal interacting systems is to ask that all the quantum parts of the system are part of elementaries whose paths start and end within the entitiy. We call this causal convexity. In other words, causal convexity excludes all quantums that leave the system (no more interacting), or that are not yet part of it (not yet interacting).
 So, a photon leaving a body is not part of a convex system, while a real photon that is the carrier of clasical electromagnetic interaction between two molecular parts of the body, is part of the convex body.
@@ -207,6 +217,7 @@ A physical phenomenon is defined as a causally non-convex interacting system, co
 ###  https://w3id.org/emmo#EMMO_50967f46_51f9_462a_b1e4_e63365b4a184
 :EMMO_50967f46_51f9_462a_b1e4_e63365b4a184 rdf:type owl:Class ;
                                            rdfs:subClassOf :EMMO_3397f270_dfc1_4500_8f6f_4d0d85ac5f71 ;
+                                           owl:disjointWith :EMMO_e024544d_e374_45b7_9340_1982040bc6b7 ;
                                            skos:example "Nitric oxide (NO) or carbon dioxide (CO₂)."@en ;
                                            skos:prefLabel "Heteronuclear"@en ;
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A molecule composed of more than one element type."@en .
@@ -214,10 +225,12 @@ A physical phenomenon is defined as a causally non-convex interacting system, co
 
 ###  https://w3id.org/emmo#EMMO_53dced52_34f6_4cf0_8a99_ddf451861543
 :EMMO_53dced52_34f6_4cf0_8a99_ddf451861543 rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_29108c7c_9087_4992_ab1c_02561665df21
+                                                                               :EMMO_820619ca_b23e_4c7a_8543_18a17722abc0
+                                                                             )
+                                                               ] ;
                                            owl:disjointWith :EMMO_b5a5494c_83bf_44aa_a9a6_49b948e68939 ;
-                                           owl:disjointUnionOf ( :EMMO_29108c7c_9087_4992_ab1c_02561665df21
-                                                                 :EMMO_820619ca_b23e_4c7a_8543_18a17722abc0
-                                                               ) ;
                                            skos:prefLabel "Fermion"@en ;
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physical particle with half odd integer spin (1/2, 3/2, etc...) that follows Fermi-Dirac statistics."@en ;
                                            :EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Fermion" .
@@ -225,6 +238,7 @@ A physical phenomenon is defined as a causally non-convex interacting system, co
 
 ###  https://w3id.org/emmo#EMMO_57d977ab_0036_4779_b59a_e47620afdb9c
 :EMMO_57d977ab_0036_4779_b59a_e47620afdb9c rdf:type owl:Class ;
+                                           owl:disjointWith :EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca ;
                                            skos:prefLabel "CompositePhysicalObject"@en ;
                                            :EMMO_31252f35_c767_4b97_a877_1235076c3e13 "A composite physical object is made of bonded objects (i.e. characterised by their quantum states using a Schrodinger equation approach) that are connected together by elementary particles travelling between them. These elemenentary particles are real particles, describing the existance of a classical field (e.g. Coulomb potential between charged particles)."@en ;
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The class of physical objects possessing a structure that is larger than a single composite particle, for which its bosonic or fermionic nature is undetermined." .
@@ -282,6 +296,10 @@ Antimatter is a subclass of matter."""@en ;
                                            :EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Hadron" .
 
 
+###  https://w3id.org/emmo#EMMO_7b79b2ac_3cf2_4d3b_8cdc_bcabb59d869e
+:EMMO_7b79b2ac_3cf2_4d3b_8cdc_bcabb59d869e owl:disjointWith :EMMO_8b1367d6_0133_4b56_acc1_fa8b058169e3 .
+
+
 ###  https://w3id.org/emmo#EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca
 :EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca rdf:type owl:Class ;
                                            skos:prefLabel "BondedObject"@en ;
@@ -292,16 +310,19 @@ D. Griffiths, \"Introduction to elementary Particles\", Wiley-VCH, 2004, pp.16-1
 
 ###  https://w3id.org/emmo#EMMO_8b1367d6_0133_4b56_acc1_fa8b058169e3
 :EMMO_8b1367d6_0133_4b56_acc1_fa8b058169e3 rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_1f19b65b_35bf_4662_a318_7f1c147cb3b6
+                                                                               :EMMO_29108c7c_9087_4992_ab1c_02561665df21
+                                                                             )
+                                                               ] ;
                                            rdfs:subClassOf :EMMO_801395f8_948e_4637_ac3b_5fcd587d72ca ;
-                                           owl:disjointUnionOf ( :EMMO_1f19b65b_35bf_4662_a318_7f1c147cb3b6
-                                                                 :EMMO_29108c7c_9087_4992_ab1c_02561665df21
-                                                               ) ;
                                            skos:prefLabel "BondedParticle"@en ;
                                            :EMMO_31252f35_c767_4b97_a877_1235076c3e13 "A composite particle is a bonded particle for which it is possible to clearly define its bosonic or fermionic behaviour. The term particle is then reserved for entities whose fermionic or bosonic nature is clearly defined."@en .
 
 
 ###  https://w3id.org/emmo#EMMO_8f87e700_99a8_4427_8ffb_e493de05c217
 :EMMO_8f87e700_99a8_4427_8ffb_e493de05c217 rdf:type owl:Class ;
+                                           owl:disjointWith :EMMO_df808271_df91_4f27_ba59_fa423c51896c ;
                                            skos:prefLabel "Proton"@en ;
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A positive charged subatomic particle found in the atomic nucleus."@en ;
                                            :EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Proton" .
@@ -309,9 +330,11 @@ D. Griffiths, \"Introduction to elementary Particles\", Wiley-VCH, 2004, pp.16-1
 
 ###  https://w3id.org/emmo#EMMO_a15cea10_9946_4d2b_95c5_cfc333fd2abb
 :EMMO_a15cea10_9946_4d2b_95c5_cfc333fd2abb rdf:type owl:Class ;
-                                           owl:disjointUnionOf ( :EMMO_7b79b2ac_3cf2_4d3b_8cdc_bcabb59d869e
-                                                                 :EMMO_8b1367d6_0133_4b56_acc1_fa8b058169e3
-                                                               ) ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_7b79b2ac_3cf2_4d3b_8cdc_bcabb59d869e
+                                                                               :EMMO_8b1367d6_0133_4b56_acc1_fa8b058169e3
+                                                                             )
+                                                               ] ;
                                            skos:altLabel "Particle"@en ;
                                            skos:prefLabel "PhysicalParticle"@en ;
                                            :EMMO_70fe84ff_99b6_4206_a9fc_9a8931836d84 "The union of hadron and lepton, or fermion and bosons."@en ;
@@ -328,9 +351,11 @@ D. Griffiths, \"Introduction to elementary Particles\", Wiley-VCH, 2004, pp.16-1
 
 ###  https://w3id.org/emmo#EMMO_b5a5494c_83bf_44aa_a9a6_49b948e68939
 :EMMO_b5a5494c_83bf_44aa_a9a6_49b948e68939 rdf:type owl:Class ;
-                                           owl:disjointUnionOf ( :EMMO_1f19b65b_35bf_4662_a318_7f1c147cb3b6
-                                                                 :EMMO_cafd0f10_ce85_48b9_9a36_2b0af141ce21
-                                                               ) ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( :EMMO_1f19b65b_35bf_4662_a318_7f1c147cb3b6
+                                                                               :EMMO_cafd0f10_ce85_48b9_9a36_2b0af141ce21
+                                                                             )
+                                                               ] ;
                                            skos:prefLabel "Boson"@en ;
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physical particle with integer spin that follows Bose–Einstein statistics."@en ;
                                            :EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Boson" .
@@ -450,16 +475,16 @@ We cannot say that H₂ molecule has direct part two H atoms, but has direct par
                                            :EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A meson with spin two."@en .
 
 
-[ owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
  ] .
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
